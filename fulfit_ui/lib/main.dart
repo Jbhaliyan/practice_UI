@@ -22,12 +22,9 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               // SizedBox(height:,),
-              ElevatedButton(
+              RaisedButton(
                 onPressed: null,
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.resolveWith(
-                      (states) => Colors.white),
-                ),
+                color: Colors.white,
                 child: Text(
                   'Sign in with Google',
                   style: TextStyle(
@@ -43,15 +40,11 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-// TODO:implement on Tap
-                },
-                child: Text(
-                  'Sign in with Email',
-                  style: TextStyle(
-                    fontSize: 22.0,
-                  ),
+              // RaisedButton(onPressed: onPressed)
+              Text(
+                'Sign in with Email',
+                style: TextStyle(
+                  fontSize: 22.0,
                 ),
               )
             ],

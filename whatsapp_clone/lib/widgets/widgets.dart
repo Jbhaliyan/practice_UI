@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget statusList(String name) {
+Widget statusList(BuildContext context, String name) {
   return ListTile(
     leading: CircleAvatar(
       radius: 30,
@@ -13,6 +13,7 @@ Widget statusList(String name) {
     subtitle: Text("Today, 20:16 PM"),
     onTap: () {
       // TODO: implement on Tap
+      Navigator.pushNamed(context, '/storyPage');
     },
   );
 }

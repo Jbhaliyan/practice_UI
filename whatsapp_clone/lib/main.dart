@@ -1,8 +1,14 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/storyPage.dart';
 import 'whatsapphome.dart';
 
-void main() {
+late List<CameraDescription> cameras;
+// cameras= availableCameras();
+Future<Null> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
   runApp(MyApp());
 }
 
@@ -18,7 +24,11 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xff25D366),
         // primarySwatch: Colors.blue,
       ),
-      home: WhatsAppHome(),
+      routes: {
+        '/': (context) => WhatsAppHome(cameras: cameras),
+        '/storyPage': (context) => StoryPage(),
+      },
+      // home: WhatsAppHome(),
     );
   }
 }

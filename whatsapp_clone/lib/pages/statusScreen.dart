@@ -58,9 +58,9 @@ class StatusScreen extends StatelessWidget {
               color: Colors.white,
               child: ListView(
                 children: [
-                  statusList('Ravi'),
-                  statusList('Krishna'),
-                  statusList('Vanya'),
+                  statusList(context, 'Ravi'),
+                  statusList(context, 'Krishna'),
+                  statusList(context, 'Vanya'),
                 ],
               ),
             ),
@@ -72,9 +72,9 @@ class StatusScreen extends StatelessWidget {
               color: Colors.white,
               child: ListView(
                 children: [
-                  statusList('Pawan Kumar'),
-                  statusList('Abhishek'),
-                  statusList('Veer'),
+                  statusList(context, 'Pawan Kumar'),
+                  statusList(context, 'Abhishek'),
+                  statusList(context, 'Veer'),
                 ],
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fulfit_ui/screens/profilePages/profileOne.dart';
+import 'package:fulfit_ui/screens/welcomeScreen/welcomeScreen.dart';
 
 import 'screens/profilePages/profileTwo.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes: {
-        '/': (context) => PageOne(),
+        '/': (context) => WelcomeScreen(),
+        '/profileOne': (context) => PageOne(),
         '/profiletwo': (context) => PageTwo(),
       },
       //  Scaffold(

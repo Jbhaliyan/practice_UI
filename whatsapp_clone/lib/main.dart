@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => WhatsAppHome(cameras: cameras),
-        '/storyPage': (context) => StoryPage(),
+        StoryPage.routeName: (context) => StoryPage(),
       },
       // home: WhatsAppHome(),
     );

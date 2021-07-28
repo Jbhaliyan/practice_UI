@@ -4,6 +4,7 @@ import 'package:story_view/story_view.dart';
 class StoryPage extends StatelessWidget {
   // const StoryPage({ Key? key }) : super(key: key);
   final _storyController = StoryController();
+  static const routeName = '/storyPage';
 
   @override
   Widget build(BuildContext context) {

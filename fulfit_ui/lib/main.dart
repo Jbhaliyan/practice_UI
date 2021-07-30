@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fulfit_ui/screens/profilePages/profileOne.dart';
-import 'package:fulfit_ui/screens/welcomeScreen/welcomeScreen.dart';
 
+import 'screens/profilePages/profileOne.dart';
 import 'screens/profilePages/profileTwo.dart';
+import 'screens/welcomeScreen/welcomeScreen.dart';
 
 void main() => runApp(MyApp());
 

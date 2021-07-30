@@ -11,10 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Pinterest Clone',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
         focusColor: Colors.white,
+        backgroundColor: Colors.black,
         primaryIconTheme: IconThemeData(
           opacity: 1,
           color: Colors.white,

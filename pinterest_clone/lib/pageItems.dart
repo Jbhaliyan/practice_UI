@@ -20,7 +20,7 @@ class GridPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      itemCount: 50,
+      itemCount: 20,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           mainAxisSpacing: 8, crossAxisCount: 3),
       itemBuilder: (ctx, i) => buildImageCard(i),

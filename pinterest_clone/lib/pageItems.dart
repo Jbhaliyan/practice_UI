@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class GridPage extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class GridPage extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(15),
             child: Image.network(
-              "https://source.unsplash.com/random?sig=$i",
+              "https://source.unsplash.com/random/200x200?sig=$i",
               fit: BoxFit.cover,
             ),
           ),
@@ -19,11 +20,14 @@ class GridPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
+    return StaggeredGridView.countBuilder(
+      crossAxisCount: 4,
       itemCount: 20,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          mainAxisSpacing: 8, crossAxisCount: 3),
       itemBuilder: (ctx, i) => buildImageCard(i),
+      staggeredTileBuilder: (int index) =>
+          new StaggeredTile.count(2, index.isEven ? 2 : 1),
+      crossAxisSpacing: 8,
+      mainAxisSpacing: 8,
     );
   }
 }

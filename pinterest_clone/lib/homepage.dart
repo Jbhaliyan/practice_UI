@@ -21,26 +21,23 @@ class _HomePageState extends State<HomePage> {
     'Profile',
     'room decor',
   ];
-  List _isSelected = [
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false
-  ];
+  // List _isSelected = [
+  //   true,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false
+  // ];
   int _current = 0;
   @override
   void initState() {
     super.initState();
-    // _isSelected[0] = true;
-    // for (int i = 1; i < pins.length; i++) _isSelected[i] = false;
-    // SelectedPin(true, 0);
   }
 
   @override
@@ -55,22 +52,26 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.only(
                   top: screenSize.height / 50, bottom: screenSize.height / 50),
               child: Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   for (int i = 0; i < pins.length; i++)
                     Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        carouselText(pins[i]),
-                        Visibility(
-                          visible: _isSelected[i],
-                          child: Container(
-                            height: 5,
-                            width: screenSize.width / 50,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: carouselText(pins[i]),
                         ),
+                        // Visibility(
+                        //   visible: _isSelected[i],
+                        //   child: Container(
+                        //     height: 5,
+                        //     width: screenSize.width / 10,
+                        //     decoration: BoxDecoration(
+                        //         color: Colors.white,
+                        //         borderRadius: BorderRadius.circular(10)),
+                        //   ),
+                        // ),
                       ],
                     ),
                 ],
@@ -94,14 +95,14 @@ class _HomePageState extends State<HomePage> {
                       onPageChanged: (index, _) {
                         setState(() {
                           _current = index;
-                          for (int i = 0; i < pins.length; i++) {
-                            if (i == index) {
-                              _isSelected[i] = true;
-                              // SelectedPin(true, i);
-                            } else {
-                              _isSelected[i] = false;
-                            }
-                          }
+                          // for (int i = 0; i < pins.length; i++) {
+                          //   if (i == index) {
+                          //     _isSelected[i] = true;
+                          //     // SelectedPin(true, i);
+                          //   } else {
+                          //     _isSelected[i] = false;
+                          //   }
+                          // }
                         });
                       },
                     ),

@@ -10,20 +10,26 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+    final isLandscape = mediaQuery.orientation == Orientation.landscape;
+    final width = mediaQuery.size.width;
+    final height = mediaQuery.size.height;
+    print(width);
+    print(height);
+    final appBar = AppBar(
+      elevation: 0,
+      leading: width > 700
+          ? null
+          : IconButton(
+              icon: SvgPicture.asset('assets/icons/menu.svg'),
+              onPressed: () {},
+            ),
+    );
+
     return Scaffold(
-      appBar: builAppBar(),
+      appBar: appBar,
       body: Body(),
       bottomNavigationBar: MyBottomBar(),
-    );
-  }
-
-  AppBar builAppBar() {
-    return AppBar(
-      elevation: 0,
-      leading: IconButton(
-        icon: SvgPicture.asset('assets/icons/menu.svg'),
-        onPressed: () {},
-      ),
     );
   }
 }

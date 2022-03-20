@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Widget bottomBar(BuildContext context) {
+Widget bottomBar(BuildContext context, MediaQueryData mediaQueryData) {
+  // final width = MediaQuery.of(context).size.width;
   return Padding(
     padding: const EdgeInsets.all(10.0),
     child: Row(
@@ -11,6 +12,7 @@ Widget bottomBar(BuildContext context) {
         icons(context, Icons.search),
         icons(context, Icons.message_rounded),
         icons(context, Icons.person),
+        if (mediaQueryData.size.width > 900) icons(context, Icons.favorite),
       ],
     ),
   );

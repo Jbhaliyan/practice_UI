@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
+    final mediaQuery = MediaQuery.of(context);
     return SafeArea(
       child: Scaffold(
         body: Column(children: [
@@ -50,7 +50,8 @@ class _HomePageState extends State<HomePage> {
             scrollDirection: Axis.horizontal,
             child: Padding(
               padding: EdgeInsets.only(
-                  top: screenSize.height / 50, bottom: screenSize.height / 50),
+                  top: mediaQuery.size.height / 50,
+                  bottom: mediaQuery.size.height / 50),
               child: Row(
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -85,7 +86,8 @@ class _HomePageState extends State<HomePage> {
                 alignment: AlignmentDirectional.bottomCenter,
                 children: [
                   CarouselSlider.builder(
-                    itemBuilder: (ctx, int index, int realIndex) => GridPage(),
+                    itemBuilder: (ctx, int index, int realIndex) =>
+                        GridPage(mediaQuery),
                     itemCount: pins.length,
                     options: CarouselOptions(
                       enableInfiniteScroll: false,
@@ -113,13 +115,13 @@ class _HomePageState extends State<HomePage> {
                     left: 20.0,
                     child: Container(
                         // margin: EdgeInsets.symmetric(horizontal: 100),
-                        width: screenSize.width / 8,
+                        width: mediaQuery.size.width / 8,
                         alignment: Alignment.bottomCenter,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(24),
                           color: Colors.grey[800],
                         ),
-                        child: bottomBar(context)),
+                        child: bottomBar(context, mediaQuery)),
                   ),
                 ],
               ),

@@ -28,6 +28,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
     _tabController = new TabController(
       length: 4,
       vsync: this,
+
       // initialIndex: 1,
     );
     _tabController.addListener(() {
@@ -53,6 +54,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
       appBar: AppBar(
           title: Text('WhatsApp'),
           elevation: 0.7,
+          backgroundColor: Theme.of(context).primaryColor,
           bottom: new TabBar(
             controller: _tabController,
             indicatorColor: Colors.white,

@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'WhatsApp',
       theme: ThemeData(
-        primaryColor: Color(0xff075E54),
-        accentColor: Color(0xff25D366),
+        primaryColor: Color.fromARGB(255, 17, 99, 47),
+        accentColor: Color.fromARGB(255, 17, 99, 47),
         // primarySwatch: Colors.blue,
       ),
       routes: {

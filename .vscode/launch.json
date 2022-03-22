@@ -1,0 +1,88 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "fulfit_ui",
+            "cwd": "fulfit_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "fulfit_ui (profile mode)",
+            "cwd": "fulfit_ui",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "fulfit_ui (release mode)",
+            "cwd": "fulfit_ui",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "pinterest_clone",
+            "cwd": "pinterest_clone",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "pinterest_clone (profile mode)",
+            "cwd": "pinterest_clone",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "pinterest_clone (release mode)",
+            "cwd": "pinterest_clone",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "plant_app_ui",
+            "cwd": "plant_app_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "plant_app_ui (profile mode)",
+            "cwd": "plant_app_ui",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "plant_app_ui (release mode)",
+            "cwd": "plant_app_ui",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "whatsapp_clone",
+            "cwd": "whatsapp_clone",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "whatsapp_clone (profile mode)",
+            "cwd": "whatsapp_clone",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "whatsapp_clone (release mode)",
+            "cwd": "whatsapp_clone",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

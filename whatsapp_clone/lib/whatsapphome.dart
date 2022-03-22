@@ -12,6 +12,7 @@ class WhatsAppHome extends StatefulWidget {
   WhatsAppHome({required this.cameras});
 
   final List<CameraDescription> cameras;
+  static const routeName = '/whatsappHome';
 
   @override
   _WhatsAppHomeState createState() => _WhatsAppHomeState();
@@ -92,3 +93,4 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
     );
   }
 }
+// keytool -list -v -keystore C:\Users\bhali\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android
